@@ -1,0 +1,128 @@
+{
+  "tag": "html",
+  "attributes": {
+    "lang": "en"
+  },
+  "value": "",
+  "children": [
+    {
+      "tag": "head",
+      "attributes": {},
+      "value": "",
+      "children": [
+        {
+          "tag": "meta",
+          "attributes": {
+            "charset": "UTF-8"
+          },
+          "value": "",
+          "children": []
+        },
+        {
+          "tag": "meta",
+          "attributes": {
+            "name": "viewport",
+            "content": "width=device-width, initial-scale=1"
+          },
+          "value": "",
+          "children": []
+        },
+        {
+          "tag": "title",
+          "attributes": {},
+          "value": "This is my page",
+          "children": []
+        },
+        {
+          "tag": "link",
+          "attributes": {
+            "rel": "stylesheet",
+            "type": "text/css",
+            "href": "/path-to-some/style.css"
+          },
+          "value": "",
+          "children": []
+        },
+        {
+          "tag": "style",
+          "attributes": {},
+          "value": "h1 {\n            background: black;\n            font-size: 12px;\n        }",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "body",
+      "attributes": {},
+      "value": "",
+      "children": [
+        {
+          "tag": "div",
+          "attributes": {
+            "class": "container",
+            "id": "main"
+          },
+          "value": "",
+          "children": [
+            {
+              "tag": "h1",
+              "attributes": {
+                "class": "title"
+              },
+              "value": "The title",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "columns"
+              },
+              "value": "",
+              "children": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": "column is-4"
+                  },
+                  "value": "",
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attributes": {
+                        "src": "/this-is-an-image/file.jpge",
+                        "alt": "the image"
+                      },
+                      "value": "",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": "column is-4"
+                  },
+                  "value": "",
+                  "children": [
+                    {
+                      "tag": "p",
+                      "attributes": {},
+                      "value": "This is a text",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "script",
+          "attributes": {},
+          "value": "function do_something() {\n        console.info(\"this is a test\");\n    }",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
