@@ -1,0 +1,27 @@
+{
+  "tag": "div",
+  "attributes": {
+    "class": "single-day"
+  },
+  "value": "",
+  "children": [
+    {
+      "tag": "h3",
+      "attributes": {
+        "style": "color: #000000;"
+      },
+      "value": "first line second line",
+      "children": [
+        {
+          "tag": "img",
+          "attributes": {
+            "src": "data:image/svg+xml;utf8;base64,",
+            "alt": ""
+          },
+          "value": "",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

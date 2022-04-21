@@ -43,4 +43,8 @@ class Parser(HTMLParser):
     def handle_data(self, data):
         if data.strip() != '':
             if 0 < self.level <= len(self.stack):
-                self.stack[self.level-1]['value'] = data.strip()
+                parent = self.stack[self.level-1]
+                if len(parent['value']) == 0:
+                    self.stack[self.level-1]['value'] = data.strip()
+                else:
+                    self.stack[self.level - 1]['value'] += ' ' + data.strip()

@@ -6,7 +6,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='html_to_json',
-    version='0.0.0.0',
+    version='0.0.0.1',
     description='Turn html into json - and keep the tags order',
     long_description=long_description,
     long_description_content_type='text/markdown',
