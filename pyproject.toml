@@ -1,0 +1,31 @@
+[project]
+name = "html_to_json"
+version = "0.0.0.2"
+description = "Turn html into json - and keep the tags order"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+keywords = ["html", "json", "development"]
+authors = [{name = "Arnaldo Ono", email = "git@onoarnaldo.com" }]
+maintainers = [{name = "Arnaldo Ono", email = "git@onoarnaldo.com" }]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest", "coverage"]
+
+[project.urls]
+"Homepage" = "https://github.com/OnoArnaldo/py-html-to-json"
+"Source" = "https://github.com/OnoArnaldo/py-html-to-json"
+
+#[project.scripts]
+#sample = "sample:main"
