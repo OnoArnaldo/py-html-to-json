@@ -1,5 +1,5 @@
 import html_to_json
-from tests.utils import ROOT, loads, text
+from tests.utils import ROOT, loads
 
 HTML = ROOT.joinpath('data', 'sample_with_breakline.html')
 JSON = ROOT.joinpath('data', 'sample_with_breakline.json')

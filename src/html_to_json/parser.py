@@ -1,9 +1,24 @@
 import typing as _
 from html.parser import HTMLParser
 
-EMPTY_ELEMENTS = ('area', 'base', 'br', 'col', 'embed',
-                  'hr', 'img', 'input', 'keygen', 'link',
-                  'meta', 'param', 'source', 'track', 'wbr', '')
+EMPTY_ELEMENTS = (
+    'area',
+    'base',
+    'br',
+    'col',
+    'embed',
+    'hr',
+    'img',
+    'input',
+    'keygen',
+    'link',
+    'meta',
+    'param',
+    'source',
+    'track',
+    'wbr',
+    '',
+)
 
 
 class Parser(HTMLParser):
@@ -14,15 +29,15 @@ class Parser(HTMLParser):
         self.root = {}
 
     @property
-    def stack_size(self):
+    def stack_size(self) -> int:
         return len(self.stack)
 
-    def append_child(self, new_element: dict) -> _.NoReturn:
+    def append_child(self, new_element: dict) -> None:
         if 0 < self.level <= self.stack_size:
-            parent = self.stack[self.level-1]
+            parent = self.stack[self.level - 1]
             parent['children'].append(new_element)
 
-    def handle_starttag(self, tag, attrs):
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         new_element = {'tag': tag, 'attributes': dict(attrs), 'value': '', 'children': []}
 
         if tag not in EMPTY_ELEMENTS:
@@ -36,15 +51,15 @@ class Parser(HTMLParser):
         else:
             self.append_child(new_element)
 
-    def handle_endtag(self, tag):
+    def handle_endtag(self, tag: str) -> None:
         self.level -= 1
         self.stack.pop()
 
-    def handle_data(self, data):
+    def handle_data(self, data: str) -> None:
         if data.strip() != '':
             if 0 < self.level <= len(self.stack):
-                parent = self.stack[self.level-1]
+                parent = self.stack[self.level - 1]
                 if len(parent['value']) == 0:
-                    self.stack[self.level-1]['value'] = data.strip()
+                    self.stack[self.level - 1]['value'] = data.strip()
                 else:
                     self.stack[self.level - 1]['value'] += ' ' + data.strip()

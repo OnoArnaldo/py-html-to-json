@@ -8,7 +8,7 @@ if _.TYPE_CHECKING:
 def from_file(file_name: 'Path') -> dict:
     p = Parser()
 
-    with open(file_name) as f:
+    with open(file_name, encoding='utf8') as f:
         for line in f:
             p.feed(line)
 
