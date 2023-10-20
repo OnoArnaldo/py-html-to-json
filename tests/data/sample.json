@@ -44,6 +44,15 @@
           "children": []
         },
         {
+          "tag": "link",
+          "attributes": {
+            "rel": "stylesheet",
+            "href": "/path-to-some/other-style.css"
+          },
+          "value": "",
+          "children": []
+        },
+        {
           "tag": "style",
           "attributes": {},
           "value": "h1 {\n            background: black;\n            font-size: 12px;\n        }",

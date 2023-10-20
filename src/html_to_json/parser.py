@@ -1,4 +1,3 @@
-import typing as _
 from html.parser import HTMLParser
 
 EMPTY_ELEMENTS = (
@@ -52,8 +51,9 @@ class Parser(HTMLParser):
             self.append_child(new_element)
 
     def handle_endtag(self, tag: str) -> None:
-        self.level -= 1
-        self.stack.pop()
+        if tag not in EMPTY_ELEMENTS:
+            self.level -= 1
+            self.stack.pop()
 
     def handle_data(self, data: str) -> None:
         if data.strip() != '':

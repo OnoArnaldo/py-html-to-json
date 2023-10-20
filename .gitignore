@@ -1,5 +1,6 @@
 .idea/
 venv310/
+venv312/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
